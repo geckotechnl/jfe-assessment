@@ -1,0 +1,193 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>
+        Manceppo
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="layout" content="main"/>
+    <link rel="stylesheet" href="stylesheets/bootstrap.css"/>
+    <link rel="stylesheet" href="stylesheets/grails.css"/>
+    <link rel="stylesheet" href="stylesheets/main.css"/>
+    <link rel="stylesheet" href="stylesheets/foundation.css"/>
+    <link rel="stylesheet" href="stylesheets/foundation-datepicker.css"/>
+    <link rel="stylesheet" href="stylesheets/foundation-icons.css"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css"/>
+    <link rel="stylesheet" href="stylesheets/application.css"/>
+</head>
+<body>
+        <div class="topbar">
+        <div class="row">
+                <p>Logged in as user@manceppo.com <a href="/logout/index">Logout</a></p>
+        </div>
+    </div>
+    <div class="header row">
+		<a href="#" title="#" class="main-logo"><img src="stylesheets/logo.png" alt="Manceppo"></a>
+		<nav>
+	<ul>
+		<li>
+			<a href="/page/overview" id="overview">Overview</a>
+		</li>
+		<li>
+			<a href="/page/wordPress" id="wordPress">Connection</a>
+		</li>
+		<li>
+			<a href="/page/account" id="account">Account</a>
+		</li>
+		<li>
+			<a href="/page/content" id="content">Content</a>
+		</li>
+		<li>
+			<a href="/page/campaign" id="campaign">Campaign</a>
+		</li>
+		<li>
+			<a href="/page/embeddedDownload" id="embeddedDownload">Embedded Download</a>
+		</li>
+
+	</ul>
+</nav>
+
+    </div>
+    
+    
+    
+<div>
+
+</div>
+<div class="row content_container">
+  
+    <form action="/download/upload" method="post" enctype="multipart/form-data" >
+
+        <h1 class="lines">
+            Upload a new document
+        </h1>
+        <div class="lineSection">
+            <span class="firstLine"></span>
+            <span class="secondLine"></span>
+        </div>
+
+        <label>
+            Title:
+            <input type="text" name="title" value="" id="title" />
+            <div id="error-title">
+                
+            </div>
+        </label>
+        <label>
+            Subtitle:
+            <input type="text" name="subtitle" value="" id="subtitle" />
+            
+        </label>
+            <div class="row">
+            <div class="large-6 columns">
+                <label>
+                    Tagline:
+                   <textarea class="textarea-wide textarea-wide_high" name="description" id="description" ></textarea>
+                   
+                </label>
+            </div>
+            <div class="columns large-6">
+                <label>
+                    Summary:
+                   <textarea class="textarea-wide textarea-wide_high" name="summary" id="summary" ></textarea>
+                   
+                </label>
+            </div>
+        </div>
+        <label>
+            Content:
+            <textarea name="content" id="tag-content" ></textarea>
+            
+        </label>
+        <label>
+            Publish Date:
+        </label>
+        <div class="date large-3" id="publishDate" data-date-format="dd-mm-yyyy" data-start-view="year" data-min-view="year">
+            <div class="small-2 columns calendar-icon">   
+                <span class="prefix"><i class="fi fi-calendar"></i></span>
+            </div>
+            <div class="small-10 columns input-items">
+                <input size="16" type="text" name="publishDate" value="" id="publishDateInput">
+            </div>
+             
+        </div>  
+            
+        <b>Document:</b>
+        <div class="docs large-6">
+            <div class="small-1 columns calendar-icon">
+                <span class="prefix">
+                    <i class="fi fi-upload"></i>
+                </span>
+            </div>
+            <div class="small-11 columns input-items">
+                <input class="fileInput" type="file" name="doc" id="doc" data-multiple-caption="{count} files selected" multiple/>
+                <label class="inputlabel" for="doc">
+                    Choose file
+                </label>
+                
+            </div>
+        </div>
+            
+        <b>
+            Image:
+        </b>
+         <div class="docs large-6">
+            <div class="small-1 columns calendar-icon">
+                <span class="prefix">
+                    <i class="fi fi-photo"></i>
+                </span>
+            </div>
+            <div class="small-11 columns input-items">
+                <input class="fileInput" type="file" name="imageLink" id="image" data-multiple-caption="{count} files selected" multiple/>
+                <label class="inputlabel" for="image">
+                    Choose image
+                </label>
+                
+           </div>
+        </div>
+
+        <b>
+            Small Image:
+        </b>
+        <div class="docs large-6">
+            <div class="small-1 columns calendar-icon">
+                <span class="prefix">
+                    <i class="fi fi-photo"></i>
+                </span>
+            </div>
+            <div class="small-11 columns input-items">
+                <input class="fileInput" type="file" name="smallImageLink" id="smallImage" data-multiple-caption="{count} files selected" multiple/>
+                <label class="inputlabel" for="smallImage">
+                    Choose image
+                </label>
+                
+            </div>
+        </div>
+        <input type="submit" name="upload" class="button" value="Upload" id="upload" />
+    </form>
+
+</div>
+<div>
+    
+</div>
+
+
+    <div class="footerPlaceholder">
+	<div class="footer" role="contentinfo">
+		<div class="footerPicture column large-2"></div>
+		<div class="column large-10">
+			<h6>Manceppo</h6>
+			<p><strong>Plug & Play with your favourite marketing apps.</strong></p>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+
+    <div id="spinner" class="spinner" style="display:none;">
+        Loading&hellip;
+    </div>
+</body>
+</html>
