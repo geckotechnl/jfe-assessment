@@ -12,10 +12,15 @@ The example has been prepared to run on Linux or MacOS using npm.
 
 ```
 npm install
+```
+
+On *Linux* or *MacOS* you can run the following to start the project:
+
+```
 npm start
 ```
 
-If you are on Windows, run:
+If you are on *Windows*, run:
 
 ```
 npm run start-windows
