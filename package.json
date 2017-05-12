@@ -13,7 +13,7 @@
     "html:watch": "watch \"npm run html:copy\" .",
     "server": "http-server dist",
     "start": "npm run clean && npm run css:copy && npm run html:copy && npm run css && npm run css:watch & npm run html:watch & npm run server",
-  "start-windows": "npm run clean && npm run css:copy && npm run html:copy && npm run css && start npm run css:watch && start npm run html:watch && start npm run server"
+    "start-windows": "npm run clean && npm run css:copy && npm run html:copy && npm run css && start npm run css:watch && start npm run html:watch && start npm run server"
   },
   "devDependencies": {
     "node-sass": "^3.4.2",
