@@ -4,21 +4,23 @@
   "description": "Geckotech front-end assessment",
   "main": "index.js",
   "scripts": {
-    "clean":"rm -rf dist && mkdir dist",
+    "clean":"shx rm -rf dist && shx mkdir dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "css": "node-sass src/stylesheets/application.scss -o dist/stylesheets",
-    "css:copy": "cp -R src/stylesheets dist/",
-  	"css:watch": "node-sass src/stylesheets/application.scss -wo dist/stylesheets",
-  	"html:copy": "cp src/*.html dist/",
-  	"html:watch": "watch  'npm run html:copy' .",
-  	"server": "http-server dist -o",
-  	"start": "npm run clean && npm run css:copy && npm run html:copy && npm run css && npm run css:watch & npm run html:watch & npm run server"
+    "css:copy": "shx cp -R src/stylesheets dist/",
+    "css:watch": "node-sass src/stylesheets/application.scss -wo dist/stylesheets",
+    "html:copy": "shx cp src/*.html dist/",
+    "html:watch": "watch \"npm run html:copy\" .",
+    "server": "http-server dist",
+    "start": "npm run clean && npm run css:copy && npm run html:copy && npm run css && npm run css:watch & npm run html:watch & npm run server",
+  "start-windows": "npm run clean && npm run css:copy && npm run html:copy && npm run css && start npm run css:watch && start npm run html:watch && start npm run server"
   },
   "devDependencies": {
-  	"node-sass": "^3.4.2",
-  	"http-server": "0.10.0",
-  	"watch": "latest"
-	},
+    "node-sass": "^3.4.2",
+    "http-server": "0.10.0",
+    "watch": "latest",
+  "shx":"0.2.2"
+  },
   "author": "Matthijs Bierman",
   "license": "ISC"
 }

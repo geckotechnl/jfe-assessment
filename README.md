@@ -15,7 +15,15 @@ npm install
 npm start
 ```
 
-A browser will automatically open. When you make a change it will take short while to copy the new HTML or compile the updated SCSS.
+If you are on Windows, run:
+
+```
+npm run start-windows
+```
+
+Open your browser at http://localhost:8081/ to view the page.
+
+When you make a change it will take short while to copy the new HTML or compile the updated SCSS.
 You must refresh the page manually to see your changes.
 
 Good luck!
